@@ -98,7 +98,7 @@ public class BrobInt {
             }
         }
         this.internalValue = value;
-        StringBuilder temp = new StringBuilder(value.substring(1));
+        StringBuilder temp = new StringBuilder(value);
         temp.reverse();
         this.reversed = temp.toString();
         //todo  参数意义不明
@@ -148,11 +148,7 @@ public class BrobInt {
      * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      */
     public BrobInt reverser() {
-        //todo  使用StringBuffer 反转字符串
-        StringBuffer sb = new StringBuffer(internalValue.substring(1));
-        sb.reverse();
-        return new BrobInt(sb.toString());
-//        throw new UnsupportedOperationException("\n         Sorry, that operation is not yet implemented.");
+        throw new UnsupportedOperationException("\n         Sorry, that operation is not yet implemented.");
     }
 
     /**
@@ -167,9 +163,7 @@ public class BrobInt {
      * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      */
     public static BrobInt reverser(BrobInt bint) {
-        //todo  使用StringBuffer 反转字符串
-        return bint.reverser();
-//        throw new UnsupportedOperationException("\n         Sorry, that operation is not yet implemented.");
+        throw new UnsupportedOperationException("\n         Sorry, that operation is not yet implemented.");
     }
 
     /**
@@ -191,31 +185,79 @@ public class BrobInt {
             temp2[i] = bint.internalValue.charAt(bint.internalValue.length() - 1 - i) - '0';
         }
         // System.out.println(Arrays.toString(temp2));
-        //todo 使用最简单的运算，易于理解，但计算效率很低，按照作业，应该使用俄罗斯农民乘法
         int i = 0;
         int j = 0;
         int carryout = 0;
         StringBuilder res = new StringBuilder();
-        while (i < temp1.length && j < temp2.length) {
-            res.append((temp1[i] + temp2[j] + carryout) % 10);
-            carryout = (temp1[i] + temp2[j]) >= 10 ? 1 : 0;
-            i++;
-            j++;
+        BrobInt result =  new BrobInt(internalValue);
+        //todo 这是均为正数以及负数的情况
+        if ((sign == 0 && bint.sign == 0) || (sign == 1 && bint.sign == 1)) {
+            while (i < temp1.length && j < temp2.length) {
+                res.append((temp1[i] + temp2[j] + carryout) % 10);
+                carryout = (temp1[i] + temp2[j]) >= 10 ? 1 : 0;
+                i++;
+                j++;
+            }
+            while (i < temp1.length) {
+                res.append((temp1[i] + carryout) % 10);
+                carryout = (temp1[i] + carryout) >= 10 ? 1 : 0;
+                i++;
+            }
+            while (j < temp2.length) {
+                // todo i --> j
+                //res.append((temp2[i] + carryout) % 10);
+                res.append((temp2[j] + carryout) % 10);
+                carryout = (temp2[j] + carryout) >= 10 ? 1 : 0;
+                j++;
+            }
+            if (carryout != 0) {
+                res.append(carryout);
+            }
+            //todo 新增皆为负数的情况
+            result = new BrobInt(res.reverse().toString());
+            if (this.sign == 1 && bint.sign == 1) {
+                result.sign = 1;
+            }
+        }else {
+            //todo 一正一负的情况
+            int[]  big;
+            int[]  small;
+            if (new BrobInt(this.internalValue).compareTo(new BrobInt(bint.internalValue)) > 0){
+                big =  temp1;
+                small = temp2;
+            }else{
+                big =  temp2;
+                small = temp1;
+            }
+
+            while (i < big.length && j < small.length) {
+                res.append(big[i] - small[j] - carryout);
+                carryout = (big[i] - small[j]) < 0 ? 1 : 0;
+                i++;
+                j++;
+            }
+            while (i < big.length) {
+                res.append(big[i] - carryout);
+                carryout = (big[i] - carryout)  < 0 ? 1 : 0;
+                i++;
+            }
+            while (j < small.length) {
+                res.append(small[j] - carryout);
+                carryout = (small[j] - carryout) < 0 ? 1 : 0;
+                j++;
+            }
+            result = new BrobInt(res.reverse().toString());
+            if (this.sign == 1) {
+                if (new BrobInt(this.internalValue).compareTo(new BrobInt(bint.internalValue)) > 0){
+                    result.sign = 1;
+                }
+            }else {
+                if (new BrobInt(this.internalValue).compareTo(new BrobInt(bint.internalValue)) < 0){
+                    result.sign = 1;
+                }
+            }
         }
-        while (i < temp1.length) {
-            res.append((temp1[i] + carryout) % 10);
-            carryout = (temp1[i] + carryout) >= 10 ? 1 : 0;
-            i++;
-        }
-        while (j < temp2.length) {
-            res.append((temp2[i] + carryout) % 10);
-            carryout = (temp2[j] + carryout) >= 10 ? 1 : 0;
-            j++;
-        }
-        if (carryout != 0) {
-            res.append(carryout);
-        }
-        return new BrobInt(res.reverse().toString());
+        return result;
     }
 
     /**
@@ -235,12 +277,16 @@ public class BrobInt {
 //                throw new UnsupportedOperationException("\n         Sorry, that operation is not yet implemented.");
         // todo BrobInt对象无法通过校验会抛出异常，这里通过判断抛出异常无意义，直接调用校验方法即可
         //其实BrobInt 初始化方法时均会校验，
-        // this.validateDigits();
-        // bint.validateDigits();
-
-        bint.sign = 1;
-        BrobInt add = add(bint);
-        bint.sign = 0;
+        this.validateDigits();
+        bint.validateDigits();
+        BrobInt copyBrobInt = new BrobInt(bint.toString());
+        if (bint.sign == 1){
+            copyBrobInt.sign = 0;
+        }else {
+            copyBrobInt.sign = 1;
+        }
+        BrobInt add = add(copyBrobInt);
+        // bint.sign = 0;
         return add;
     }
 
@@ -268,7 +314,7 @@ public class BrobInt {
                 res[i + j] += temp1[i] * temp2[j];
             }
         }
-        System.out.println(Arrays.toString(res));
+//        System.out.println(Arrays.toString(res));
         StringBuilder res_in_string = new StringBuilder();
         for (int i = 0; i < res.length - 1; i++) {
             res[i + 1] += res[i] / 10;
@@ -306,12 +352,12 @@ public class BrobInt {
 
         // todo 没有compare方法，只有compareTo方法
 //            Integer compare = compare(this, bint);
-        Integer compare = compareTo(bint);
+        int compare = compareTo(bint);
         if (compare == -1) {
             return new BrobInt("0");
         } else {
-            Small = bint;
-            Big = this;
+            Small = new BrobInt(bint.toString());
+            Big = new BrobInt(this.toString());
         }
         // todo BrobInter to BrobInt
 //            BrobInt cnt = new BrobInter("0");
@@ -360,7 +406,6 @@ public class BrobInt {
             Big = this;
         }
         BrobInt cnt = new BrobInt("0");
-        // todo 代码中通过减法实现余数的获取
         while (true) {
             Big = Big.subtract(Small);
             BrobInt brobInter = new BrobInt("1");
@@ -418,14 +463,17 @@ public class BrobInt {
             }
         }
 
+        // todo 两正与两负情况不同
+        int symbol = sign == 0 ? 1 : -1;
+
         // compare digit-by-digit
         // can only go to the length of the shortest if they are different lengths
         // int end = (me.length() < arg.length()) ? me.length() : arg.length();
         for (int i = 0; i < me.length(); i++) {
             if (me.charAt(i) < arg.charAt(i)) {
-                return -1;
+                return -1 * symbol;
             } else if (me.charAt(i) > arg.charAt(i)) {
-                return 1;
+                return 1 * symbol;
             }
         }
         return 0;      // if it gets here, just assume equality to fool the compiler
@@ -470,7 +518,12 @@ public class BrobInt {
      */
     @Override
     public String toString() {
-        return internalValue;
+        String sign = "";
+        //todo 负数应该加上符号
+        if (getSign() == 1){
+            sign = "-";
+        }
+        return sign+internalValue;
     }
 
     /**

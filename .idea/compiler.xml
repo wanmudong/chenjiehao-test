@@ -10,10 +10,10 @@
         <module name="netty-in-action" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="chenjiehao-test" target="1.5" />
-      <module name="java-homework" target="1.5" />
-      <module name="netty-in-action" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="chenjiehao-test" target="8" />
+      <module name="java-homework" target="8" />
+      <module name="netty-in-action" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

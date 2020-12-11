@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,16 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f866c680-9460-4c96-92f5-991866594bd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-homework/java-homework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-homework/src/main/java/Java作业2/BrobInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-homework/src/main/java/Java作业2/BrobIntTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-homework/src/main/java/Java作业2/Neptune.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-homework/src/main/java/java作业2模板/BornInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-homework/src/main/java/java作业2模板/BrobIntTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-homework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java-homework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chenjiehao-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chenjiehao-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-homework/java-homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-homework/java-homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-homework/src/main/java/Java作业2/BrobInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-homework/src/main/java/Java作业2/BrobInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-in-action/netty-in-action.iml" beforeDir="false" afterPath="$PROJECT_DIR$/netty-in-action/netty-in-action.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\soft\program\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1hgHQQn4I2nH0oc46BwxeCPIoow" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -67,10 +77,10 @@
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/java-homework/src/main/java/Java作业2" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -81,7 +91,7 @@
       <recent name="$PROJECT_DIR$/java-homework/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BrobInt">
+  <component name="RunManager" selected="Application.BrobIntTester">
     <configuration name="BirthdaySolver" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BirthdaySolver" />
       <module name="java-homework" />
@@ -122,18 +132,82 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BrobIntTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java作业2模板.BrobIntTester" />
+      <module name="java-homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java作业2模板.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BrobIntTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java作业2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Java作业2" />
+      <option name="MAIN_CLASS_NAME" value="Java作业2.BrobIntTester" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BrobIntTester.constructTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java作业2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Java作业2" />
+      <option name="MAIN_CLASS_NAME" value="Java作业2.BrobIntTester" />
+      <option name="METHOD_NAME" value="constructTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.BirthdaySolver" />
       <item itemvalue="Application.BirthdaySolver1" />
       <item itemvalue="Application.BrobInt" />
+      <item itemvalue="JUnit.BrobIntTester" />
+      <item itemvalue="JUnit.BrobIntTester.constructTest" />
+      <item itemvalue="Application.BrobIntTester" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BrobIntTester" />
+        <item itemvalue="JUnit.BrobIntTester" />
         <item itemvalue="Application.BrobInt" />
+        <item itemvalue="JUnit.BrobIntTester.constructTest" />
         <item itemvalue="Application.BirthdaySolver1" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -149,11 +223,13 @@
       <workItem from="1607310838669" duration="18484000" />
       <workItem from="1607489231725" duration="3076000" />
       <workItem from="1607585840199" duration="8090000" />
+      <workItem from="1607637615225" duration="1727000" />
+      <workItem from="1607639379076" duration="6493000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -172,16 +248,21 @@
       <screen x="-534" y="-1440" width="2560" height="1440" />
     </state>
     <state x="353" y="-1248" key="#BirthdaySolver/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607321754269" />
-    <state x="80" y="0" width="1280" height="900" key="#Project_Structure" timestamp="1607310938579">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="142" y="0" width="1280" height="900" key="#Project_Structure" timestamp="1607637762423">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="80" y="0" width="1280" height="900" key="#Project_Structure/0.0.1440.900/-534.-1440.2560.1440@0.0.1440.900" timestamp="1607310938579" />
+    <state x="142" y="0" key="#Project_Structure/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607637762423" />
     <state x="-392" y="-1417" key="#Project_Structure/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599643209902" />
     <state x="80" y="23" key="#Project_Structure/0.23.1440.816/-534.-1417.2560.1417@0.23.1440.816" timestamp="1599634593053" />
     <state x="206" y="-1126" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607331147629">
       <screen x="-534" y="-1440" width="2560" height="1440" />
     </state>
     <state x="206" y="-1126" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607331147629" />
+    <state x="92" y="92" width="2376" height="1216" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607641496942">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607641496942" />
     <state x="481" y="-1078" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1607321540157">
       <screen x="-534" y="-1440" width="2560" height="1440" />
     </state>
@@ -204,6 +285,10 @@
       <screen x="-534" y="-1440" width="2560" height="1440" />
     </state>
     <state x="418" y="-1025" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607329376481" />
+    <state x="964" y="404" key="FileChooserDialogImpl" timestamp="1607639164024">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="964" y="404" key="FileChooserDialogImpl/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607639164024" />
     <state x="512" y="-855" key="Github.CreateGistDialog" timestamp="1599819158972">
       <screen x="-534" y="-1417" width="2560" height="1417" />
     </state>
@@ -216,65 +301,74 @@
       <screen x="-534" y="-1417" width="2560" height="1417" />
     </state>
     <state x="430" y="-1198" key="Github.UntrackedFilesDialog/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599819225389" />
-    <state width="2508" height="404" key="GridCell.Tab.0.bottom" timestamp="1607600824729">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.0.bottom" timestamp="1607645836199">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="404" key="GridCell.Tab.0.bottom/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600775965" />
     <state width="1388" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900/-534.-1440.2560.1440@0.0.1440.900" timestamp="1607311386239" />
+    <state width="2517" height="411" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836199" />
     <state width="1254" height="231" key="GridCell.Tab.0.bottom/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1600425784508" />
     <state width="1254" height="369" key="GridCell.Tab.0.bottom/0.23.1440.812/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599732552937" />
     <state width="2508" height="404" key="GridCell.Tab.0.bottom/0.23.1440.819/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607326189739" />
     <state width="2508" height="404" key="GridCell.Tab.0.bottom/44.23.1396.877/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600824729" />
-    <state width="2508" height="404" key="GridCell.Tab.0.center" timestamp="1607600824721">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.0.center" timestamp="1607645836199">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="404" key="GridCell.Tab.0.center/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600775960" />
     <state width="1388" height="191" key="GridCell.Tab.0.center/0.0.1440.900/-534.-1440.2560.1440@0.0.1440.900" timestamp="1607311386235" />
+    <state width="2517" height="411" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836199" />
     <state width="1254" height="231" key="GridCell.Tab.0.center/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1600425784507" />
     <state width="1254" height="369" key="GridCell.Tab.0.center/0.23.1440.812/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599732552937" />
     <state width="2508" height="404" key="GridCell.Tab.0.center/0.23.1440.819/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607326189736" />
     <state width="2508" height="404" key="GridCell.Tab.0.center/44.23.1396.877/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600824721" />
-    <state width="2508" height="404" key="GridCell.Tab.0.left" timestamp="1607600824719">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.0.left" timestamp="1607645836199">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="404" key="GridCell.Tab.0.left/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600775958" />
     <state width="1388" height="191" key="GridCell.Tab.0.left/0.0.1440.900/-534.-1440.2560.1440@0.0.1440.900" timestamp="1607311386233" />
+    <state width="2517" height="411" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836199" />
     <state width="1254" height="231" key="GridCell.Tab.0.left/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1600425784506" />
     <state width="1254" height="369" key="GridCell.Tab.0.left/0.23.1440.812/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599732552936" />
     <state width="2508" height="404" key="GridCell.Tab.0.left/0.23.1440.819/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607326189734" />
     <state width="2508" height="404" key="GridCell.Tab.0.left/44.23.1396.877/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600824719" />
-    <state width="2508" height="404" key="GridCell.Tab.0.right" timestamp="1607600824727">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.0.right" timestamp="1607645836199">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="404" key="GridCell.Tab.0.right/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600775962" />
     <state width="1388" height="191" key="GridCell.Tab.0.right/0.0.1440.900/-534.-1440.2560.1440@0.0.1440.900" timestamp="1607311386237" />
+    <state width="2517" height="411" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836199" />
     <state width="1254" height="231" key="GridCell.Tab.0.right/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1600425784508" />
     <state width="1254" height="369" key="GridCell.Tab.0.right/0.23.1440.812/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599732552937" />
     <state width="2508" height="404" key="GridCell.Tab.0.right/0.23.1440.819/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607326189737" />
     <state width="2508" height="404" key="GridCell.Tab.0.right/44.23.1396.877/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607600824727" />
-    <state width="2508" height="499" key="GridCell.Tab.1.bottom" timestamp="1607396901884">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.1.bottom" timestamp="1607645836358">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="499" key="GridCell.Tab.1.bottom/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607396901884" />
-    <state width="2508" height="499" key="GridCell.Tab.1.center" timestamp="1607396901881">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836358" />
+    <state width="2517" height="411" key="GridCell.Tab.1.center" timestamp="1607645836357">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="499" key="GridCell.Tab.1.center/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607396901881" />
-    <state width="2508" height="499" key="GridCell.Tab.1.left" timestamp="1607396901880">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836357" />
+    <state width="2517" height="411" key="GridCell.Tab.1.left" timestamp="1607645836357">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="499" key="GridCell.Tab.1.left/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607396901880" />
-    <state width="2508" height="499" key="GridCell.Tab.1.right" timestamp="1607396901883">
-      <screen x="-534" y="-1440" width="2560" height="1440" />
+    <state width="2517" height="411" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836357" />
+    <state width="2517" height="411" key="GridCell.Tab.1.right" timestamp="1607645836358">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2508" height="499" key="GridCell.Tab.1.right/0.0.1440.900/-534.-1440.2560.1440@-534.-1440.2560.1440" timestamp="1607396901883" />
+    <state width="2517" height="411" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607645836358" />
     <state x="168" y="-1129" key="Maven.ArtifactSearchDialog" timestamp="1599643801316">
       <screen x="-534" y="-1417" width="2560" height="1417" />
     </state>
     <state x="168" y="-1129" key="Maven.ArtifactSearchDialog/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599643801316" />
-    <state x="130" y="-1190" key="SettingsEditor" timestamp="1599819114230">
-      <screen x="-534" y="-1417" width="2560" height="1417" />
+    <state x="664" y="224" key="SettingsEditor" timestamp="1607639442775">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="664" y="224" key="SettingsEditor/0.0.2560.1400/-1440.0.1440.2520@0.0.2560.1400" timestamp="1607639442775" />
     <state x="130" y="-1190" key="SettingsEditor/0.23.1440.811/-534.-1417.2560.1417@-534.-1417.2560.1417" timestamp="1599819114230" />
     <state x="381" y="-1048" width="730" height="656" key="find.popup" timestamp="1607599205732">
       <screen x="-534" y="-1440" width="2560" height="1440" />
@@ -305,6 +399,16 @@
           <url>file://$PROJECT_DIR$/java-homework/src/main/java/BirthdaySolver.java</url>
           <line>97</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java-homework/src/main/java/java作业2模板/BrobIntTester.java</url>
+          <line>590</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java-homework/src/main/java/Java作业2/BrobInt.java</url>
+          <line>364</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
