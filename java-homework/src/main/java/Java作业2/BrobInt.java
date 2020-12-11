@@ -91,6 +91,8 @@ public class BrobInt {
             sign = 0;
         }
 
+
+
         for (int i = 0; i < value.length(); i++) {
             if (value.charAt(i) < '0' || '9' < value.charAt(i)) {
                 throw new IllegalArgumentException("digit " + value.charAt(i) +
@@ -222,6 +224,7 @@ public class BrobInt {
             //todo 一正一负的情况
             int[]  big;
             int[]  small;
+            int replay = 0;
             if (new BrobInt(this.internalValue).compareTo(new BrobInt(bint.internalValue)) > 0){
                 big =  temp1;
                 small = temp2;
@@ -231,20 +234,27 @@ public class BrobInt {
             }
 
             while (i < big.length && j < small.length) {
-                res.append(big[i] - small[j] - carryout);
-                carryout = (big[i] - small[j]) < 0 ? 1 : 0;
+                carryout = (big[i] - small[j] - replay) < 0 ? 1 : 0;
+                if ((big[i] - small[j] - replay) < 0) {
+                    res.append(big[i] - small[j] - replay + carryout * 10);
+                    replay = 1;
+                }else {
+                    res.append(big[i] - small[j] - replay);
+                    replay = 0;
+                }
                 i++;
                 j++;
             }
             while (i < big.length) {
-                res.append(big[i] - carryout);
-                carryout = (big[i] - carryout)  < 0 ? 1 : 0;
+                carryout = (big[i] - replay) < 0 ? 1 : 0;
+                if ((big[i] - replay) < 0){
+                    res.append(big[i] - replay + carryout * 10);
+                    replay = 1;
+                }else {
+                    res.append(big[i] - replay);
+                    replay = 0;
+                }
                 i++;
-            }
-            while (j < small.length) {
-                res.append(small[j] - carryout);
-                carryout = (small[j] - carryout) < 0 ? 1 : 0;
-                j++;
             }
             result = new BrobInt(res.reverse().toString());
             if (this.sign == 1) {
@@ -414,6 +424,7 @@ public class BrobInt {
                 break;
             }
         }
+        Big.setInternalValue(Big.internalValue.replaceAll("^[0]+", ""));
         return Big;
     }
 
